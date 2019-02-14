@@ -1,0 +1,9 @@
+﻿  glad.c
+  main.cpp
+c:\users\user\documents\repositories\wavesim\wavesim\main.cpp(42): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\user\documents\repositories\wavesim\wavesim\main.cpp(42): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+c:\users\user\documents\repositories\wavesim\wavesim\main.cpp(53): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\user\documents\repositories\wavesim\wavesim\main.cpp(55): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\user\documents\repositories\wavesim\wavesim\main.cpp(156): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  WaveSim.vcxproj -> C:\Users\User\Documents\Repositories\WaveSim\Debug\WaveSim.exe
+  WaveSim.vcxproj -> C:\Users\User\Documents\Repositories\WaveSim\Debug\WaveSim.pdb (Partial PDB)
