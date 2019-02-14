@@ -73,6 +73,14 @@
     <IncludePath>C:\Users\User\Documents\C++ libraries and includes\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\User\Documents\C++ libraries and includes\Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\User\Documents\Repositories\WaveSim\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\User\Documents\Repositories\WaveSim\Libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Users\User\Documents\C++ libraries and includes\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\User\Documents\C++ libraries and includes\Libs;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -89,6 +97,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -101,6 +112,7 @@
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,6 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderClass.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="fragment.fs">
+      <FileType>Document</FileType>
+    </Text>
+    <Text Include="vertex.vs">
+      <FileType>Document</FileType>
+    </Text>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

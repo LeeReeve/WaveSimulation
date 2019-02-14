@@ -27,4 +27,12 @@
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="fragment.fs">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="vertex.vs">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
