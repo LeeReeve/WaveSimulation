@@ -37,9 +37,9 @@ const float Spv = 1.0f;			//Mass per unit area of solar panels in kgm-2
 const float pi = 3.141592654f;	//Pi
 
 //Wave parameters
-const float L = 3.0f;					//Half width of wave displayed (1.0f is half the window) in m divided by 3.35
-const float K = 1/L;					//Wavenumber of the wave in m-1 multiplied by 3.35
-const float V = sqrt(9.81 * L / pi);	//Velocity of the wave in ms-1 divided by 3.35
+const float L = 5.0f;					//Half width of wave displayed (1.0f is half the window) in m divided by 3.35
+const float K = pi/L;					//Wavenumber of the wave in m-1 multiplied by 3.35
+const float V = 0.5f * sqrt(9.81 * L / pi);	//Velocity of the wave in ms-1 divided by 3.35
 const float W = V * K;					//Frequency of the wave in ms-1 divided by 3.35
 const float A = 0.2f;					//Amplitude of the wave in m divided by 3.35
 
@@ -139,7 +139,8 @@ int main() {
 
 	//Initialise time and change in time variables
 	float t = 0.0f;
-	float deltat = 0.01f;
+	float deltat = 0.001f;
+	float oldt = 0.0f;
 
 	//Velocities to use in iteration
 	float oldvel = 0.0f;
@@ -148,7 +149,7 @@ int main() {
 	float newangvel = 0.0f;
 	//Render loop:
 	while (!glfwWindowShouldClose(window)) {
-
+		
 		//Get the time
 		//deltat = (glfwGetTime() - t);
 		t += deltat;
